@@ -34,15 +34,18 @@ models:
     description: '{{ doc("dim_hosts_cleansed") }}'
     columns:
       - name: host_id
+        description: This is the host id for the listing
         tests:
           - not_null
           - unique
       
       - name: host_name
+        description: The name of the host for the listing
         tests:
           - not_null
       
       - name: is_superhost
+        description: Flags if the host is considered a super host or not
         tests:
           - accepted_values:
               values: ['t', 'f']
