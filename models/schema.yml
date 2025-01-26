@@ -26,11 +26,12 @@ models:
               values: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room']
 
       - name: minimum_nights
-        description: '{{ doc("dim_istings_cleansed_minimum_nights") }}'
+        description: '{{ doc("dim_listings_cleansed_minimum_nights") }}'
         tests:
           - positive_value
 
   - name: dim_hosts_cleansed
+    description: '{{ doc("dim_hosts_cleansed") }}'
     columns:
       - name: host_id
         tests:
